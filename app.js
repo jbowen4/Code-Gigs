@@ -17,9 +17,8 @@ app.set('view engine', 'ejs');
 // Set static folder
 app.use(express.static("public"));
 
-app.get('/', (req, res) => {
-    res.send('INDEX');
-})
+// Index route
+app.get('/', (req, res) => res.render('home'));
 
 // Gig routes
 app.use('/gigs', require('./routes/gigs'));

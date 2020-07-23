@@ -9,6 +9,9 @@ router.get('/', (req, res) =>
     .then(gigs => res.render('gigs', { gigs }))
     .catch(err => res.render('error', {error: err})));
 
+// Display add gig form
+router.get('/add', (req, res) => res.render('add'));
+
 // Add a gig
 
 
