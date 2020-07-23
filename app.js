@@ -1,5 +1,4 @@
 const express = require('express');
-const exphbs = require('express-handlebars');
 const path = require('path'); 
 
 // Database
@@ -11,6 +10,12 @@ db.authenticate()
     .catch(err => console.log(err))
 
 const app = express();
+
+// Handlebars Middleware
+app.set('view engine', 'ejs');
+
+// Set static folder
+app.use(express.static("public"));
 
 app.get('/', (req, res) => {
     res.send('INDEX');

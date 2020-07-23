@@ -1,0 +1,20 @@
+<%- include("partials/header"); -%>
+
+<section id="gigs" class="container">
+    <h1>All Gigs</h1>
+
+    <% for (var i=0; i<gigs.length; i++) { %>
+      <div class="gig">
+        <h3><%=gigs[i].title%></h3>
+        <p><%=gigs[i].description%></p>
+        <ul>
+          <li>Budget: <%=gigs[i].budget%></li>
+          <li><a href="mailto:<%=gigs[i].contact_email%>" class="btn btn-reverse">Apply Now</a></li>
+        </ul>
+        <div class="tech">
+          <small>Technologies Needed: <span><%=gigs[i].technologies%></span></small>
+        </div>
+      </div>
+    <% } %>
+    
+</section>
