@@ -14,6 +14,8 @@ const app = express();
 // Handlebars Middleware
 app.set('view engine', 'ejs');
 
+app.use(express.urlencoded({ extended: false }));
+
 // Set static folder
 app.use(express.static("public"));
 
